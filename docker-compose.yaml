@@ -13,3 +13,9 @@ services:
       - './docusaurus.config.js:/app/docusaurus.config.js'
       - './sidebars.js:/app/sidebars.js'
       - '.:/app/'
+    command:
+        - /bin/sh
+        - -c
+        - |
+          npm install
+          npm start -- --port 8000
