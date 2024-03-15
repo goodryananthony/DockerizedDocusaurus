@@ -17,5 +17,7 @@ services:
         - /bin/sh
         - -c
         - |
-          npm install
-          npm start -- --port 8000
+          npm cache clean --force
+          npm install --verbose
+          npm run build
+          npm run serve -- --port 8000
